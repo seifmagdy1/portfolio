@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seif Magde — Frontend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <span class="preloader-logo">&lt; SM /&gt;</span>
+  <div class="preloader-bar"><div class="preloader-fill"></div></div>
+</div>
+
+<header class="navbar" id="top">
+  <a href="#home" class="logo">&lt; SM /&gt;</a>
+  <nav class="nav-links">
+    <a href="#home"       class="active" data-en="Home"       data-ar="الرئيسية">Home</a>
+    <a href="#about"                     data-en="About"      data-ar="عني">About</a>
+    <a href="#education"                 data-en="Education"  data-ar="التعليم">Education</a>
+    <a href="#skills"                    data-en="Skills"     data-ar="المهارات">Skills</a>
+    <a href="#experience"                data-en="Experience" data-ar="الخبرة">Experience</a>
+    <a href="#services"                  data-en="Services"   data-ar="الخدمات">Services</a>
+    <a href="#projects"                  data-en="Projects"   data-ar="المشاريع">Projects</a>
+    <a href="#contact"                   data-en="Contact"    data-ar="تواصل">Contact</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+      <i class="fa-solid fa-moon" id="themeIcon"></i>
+    </button>
+    <button class="lang-btn" id="langToggle" aria-label="Toggle language">
+      <span id="langLabel">AR</span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section class="section hero" id="home">
+    <div class="hero-bg" aria-hidden="true">
+      <span class="particle p1"></span><span class="particle p2"></span>
+      <span class="particle p3"></span><span class="particle p4"></span>
+      <span class="particle p5"></span><span class="particle p6"></span>
+      <span class="particle p7"></span><span class="particle p8"></span>
+    </div>
+
+    <div class="hero-left reveal">
+      <div class="terminal-bar">
+        <span class="t-dot red"></span>
+        <span class="t-dot yellow"></span>
+        <span class="t-dot green"></span>
+        <span class="t-path">~/seif-magde</span>
+      </div>
+      <p class="greeting" data-en="HELLO, I'M" data-ar="مرحباً، أنا">HELLO, I'M</p>
+      <h1>
+        <span class="name-first">Seif Magde</span>
+        <span class="name-role" data-en="Frontend Developer" data-ar="مطوّر واجهات">Frontend Developer</span>
+      </h1>
+      <div class="role-line">
+        <span class="role-prefix" data-en="I'm a " data-ar="أنا ">I'm a </span>
+        <span id="typewriter"></span><span class="cursor"></span>
+      </div>
+      <div class="tagline-block">
+        <p data-en="I build modern, responsive, and user-focused web interfaces with clean architecture and smooth digital experiences."
+           data-ar="أبني واجهات ويب حديثة وسريعة الاستجابة تركّز على المستخدم بهندسة نظيفة وتجارب رقمية سلسة.">
+          I build modern, responsive, and user-focused web interfaces with clean architecture and smooth digital experiences.
+        </p>
+      </div>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-primary">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span data-en="Get In Touch" data-ar="تواصل معي">Get In Touch</span>
+        </a>
+        <a href="#projects" class="btn btn-secondary">
+          <i class="fa-solid fa-code-fork"></i>
+          <span data-en="View My Work" data-ar="أعمالي">View My Work</span>
+        </a>
+      </div>
+      <div class="socials">
+        <a class="social-btn" href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a class="social-btn" href="https://linkedin.com/in/Seif-Magde" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a class="social-btn" href="https://wa.me/201145035484" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="hero-right reveal delay-1">
+      <div class="photo-wrapper">
+        <div class="photo-frame">
+          <img src="Photo/My_photo(3).jpeg" alt="Seif Magde"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="photo-placeholder">
+            <i class="fa-solid fa-user"></i>
+            <span>Add photo to <code>photo/</code></span>
+          </div>
+          <div class="photo-overlay"></div>
+        </div>
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          <span data-en="Available for work" data-ar="متاح للعمل">Available for work</span>
+        </div>
+      </div>
+      <div class="code-card">
+        <span class="code-line"><span class="kw">class</span> <span class="cls">Developer</span> {</span>
+        <span class="code-line">&nbsp;&nbsp;name: <span class="str">"Seif"</span>;</span>
+        <span class="code-line">&nbsp;&nbsp;role: <span class="str">"Frontend"</span>;</span>
+        <span class="code-line">&nbsp;&nbsp;stack: <span class="arr">["React", ".NET"]</span>;</span>
+        <span class="code-line">}</span>
+      </div>
+    </div>
+
+    <div class="scroll-down-hint">
+      <span data-en="SCROLL DOWN" data-ar="اسحب للأسفل">SCROLL DOWN</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="section-head reveal">
+      <p class="eyebrow" data-en="GET TO KNOW ME" data-ar="تعرّف عليّ">GET TO KNOW ME</p>
+      <h2 data-en="Story Behind Me" data-ar="قصتي">Story Behind Me</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="about-grid reveal delay-1">
+      <div class="about-photo-wrap">
+        <img src="Photo/My_photo (2).jpg" alt="Seif Magde" class="about-photo"
+          onerror="this.style.display='none';" />
+        <div class="exp-badge">
+          <span class="exp-num">2+</span>
+          <span class="exp-label" data-en="Years Experience" data-ar="سنوات خبرة">Years Experience</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <h3 data-en="Frontend Developer & React Specialist" data-ar="مطوّر واجهات متخصص في React">Frontend Developer &amp; React Specialist</h3>
+        <p data-en="I'm a final-year Computer Science student and Frontend Developer specializing in React.js, focused on building clean, responsive, and high-performance user interfaces with strong UI/UX principles. I have hands-on experience through internships and real projects, collaborating with teams to deliver practical solutions. I also have basic Flutter experience and solid backend knowledge in Java, Python, and SQL."
+           data-ar="أنا طالب في السنة النهائية في علوم الحاسب ومطوّر واجهات أمامية متخصص في React.js، أركز على بناء واجهات مستخدم نظيفة، متجاوبة، وعالية الأداء مع تطبيق قوي لمبادئ UI/UX. لدي خبرة عملية من خلال التدريب والمشاريع الواقعية مع العمل ضمن فرق لتقديم حلول عملية. كما أمتلك خبرة أساسية في Flutter ومعرفة قوية بالـ Backend باستخدام Java وPython وSQL.">
+          I’m a final-year Computer Science student and Frontend Developer specializing in React.js, focused on building clean, responsive, and high-performance user interfaces with strong UI/UX principles. I have hands-on experience through internships and real projects, collaborating with teams to deliver practical solutions. I also have basic Flutter experience and solid backend knowledge in Java, Python, and SQL.
+        </p>
+        <div class="about-meta">
+          <span><i class="fa-solid fa-location-dot"></i> Cairo, Egypt</span>
+          <span><i class="fa-solid fa-envelope"></i> seifmagde40@gmail.com</span>
+          <span><i class="fa-solid fa-graduation-cap"></i> <span data-en="CS Student" data-ar="طالب علوم حاسب">CS Student</span></span>
+        </div>
+        <a href="assets/Seif-Resume.pdf" class="btn btn-primary" download="Seif-Magde-CV.pdf">
+          <i class="fa-solid fa-download"></i>
+          <span data-en="Download CV" data-ar="تحميل السيرة الذاتية">Download CV</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section class="section" id="education">
+    <div class="section-head reveal">
+      <p class="eyebrow">MY ACADEMIC JOURNEY</p>
+      <h2>Education</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="education-timeline reveal delay-1">
+      <article class="edu-item">
+        <div class="edu-node"><i class="fa-solid fa-building-columns"></i></div>
+        <div class="edu-card">
+          <p class="edu-date"><i class="fa-regular fa-calendar"></i> 2022 - Present</p>
+          <h3>Future University in Egypt</h3>
+          <p class="edu-org">Faculty of Computers &amp; Information</p>
+          <p class="edu-track">Computer Science</p>
+          <div class="edu-divider"></div>
+          <h4 class="edu-highlights-title"><i class="fa-solid fa-star"></i> <span>Key Highlights</span></h4>
+          <ul class="edu-highlights">
+            <li>Strong focus on frontend engineering and user interface architecture.</li>
+            <li>Applied academic concepts in full-stack projects using React, .NET, and SQL.</li>
+          </ul>
+          <div class="edu-tags">
+            <span class="edu-tag tag-gold"><i class="fa-solid fa-graduation-cap"></i> CS Student</span>
+            <span class="edu-tag tag-cyan"><i class="fa-solid fa-code"></i> React Focus</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="edu-item">
+        <div class="edu-node"><i class="fa-solid fa-atom"></i></div>
+        <div class="edu-card">
+          <p class="edu-date"><i class="fa-regular fa-calendar"></i> Jun 2025 - Dec 2025</p>
+          <h3>DEPI - React Development</h3>
+          <p class="edu-org">Digital Egypt Pioneers Initiative</p>
+          <div class="edu-divider"></div>
+          <h4 class="edu-highlights-title"><i class="fa-solid fa-star"></i> <span>Key Highlights</span></h4>
+          <ul class="edu-highlights">
+            <li>Successfully generated $300+ in revenue during the freelancing phase of the initiative.</li>
+            <li>Developed a full-stack e-commerce platform awarded Best Project at Harvest Company.</li>
+          </ul>
+          <div class="edu-tags">
+            <span class="edu-tag tag-purple"><i class="fa-solid fa-certificate"></i> Certified</span>
+            <span class="edu-tag tag-pink"><i class="fa-solid fa-code-branch"></i> 5+ Projects</span>
+            <span class="edu-tag tag-green"><i class="fa-solid fa-dollar-sign"></i> 300+</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section" id="skills">
+    <div class="section-head reveal">
+      <p class="eyebrow" data-en="WHAT I WORK WITH" data-ar="ما أعمل به">WHAT I WORK WITH</p>
+      <h2 data-en="Skills & Technologies" data-ar="المهارات والتقنيات">Skills &amp; Technologies</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills-groups reveal delay-1">
+      <div class="skill-group card">
+        <h3 data-en="Programming Languages" data-ar="لغات البرمجة">Programming Languages</h3>
+        <div class="skills-icon-grid">
+          <div class="skill-item"><div class="skill-icon" style="background:#3572A5;"><i class="fa-brands fa-python"></i></div><span>Python</span></div>
+          <div class="skill-item"><div class="skill-icon" style="background:#555;"><i class="fa-solid fa-c"></i></div><span>C</span></div>
+          <div class="skill-item"><div class="skill-icon" style="background:#00599C;"><b style="font-size:.7rem">C++</b></div><span>C++</span></div>
+          <div class="skill-item"><div class="skill-icon" style="background:#F7DF1E;color:#000;"><i class="fa-brands fa-js"></i></div><span>JavaScript</span></div>
+          <div class="skill-item"><div class="skill-icon" style="background:#4479A1;"><i class="fa-solid fa-database"></i></div><span>SQL</span></div>
+        </div>
+      </div>
+      <div class="skill-group card">
+        <h3 data-en="Web Development" data-ar="تطوير الويب">Web Development</h3>
+        <div class="skills-icon-grid">
+          <div class="skill-item"><div class="skill-icon" style="background:#E34F26;"><i class="fa-brands fa-html5"></i></div><span>HTML5</span></div>
+          <div class="skill-item"><div class="skill-icon" style="background:#1572B6;"><i class="fa-brands fa-css3-alt"></i></div><span>CSS3</span></div>
+          <div class="skill-item"><div class="skill-icon" style="background:#61DAFB;color:#000;"><i class="fa-brands fa-react"></i></div><span>React</span></div>
+          <div class="skill-item"><div class="skill-icon" style="background:#339933;"><i class="fa-brands fa-node-js"></i></div><span>Node.js</span></div>
+          <div class="skill-item"><div class="skill-icon" style="background:#7952B3;"><i class="fa-brands fa-bootstrap"></i></div><span>Bootstrap</span></div>
+        </div>
+      </div>
+      <div class="skill-group card">
+        <h3 data-en="Tools & Technologies" data-ar="الأدوات والتقنيات">Tools &amp; Technologies</h3>
+        <div class="skills-icon-grid">
+          <div class="skill-item"><div class="skill-icon" style="background:#512BD4;"><b style="font-size:.65rem">.NET</b></div><span>.NET</span></div>
+          <div class="skill-item"><div class="skill-icon" style="background:#F2C811;color:#000;"><i class="fa-solid fa-chart-bar"></i></div><span>Power BI</span></div>
+          <div class="skill-item"><div class="skill-icon" style="background:#EE4C2C;"><i class="fa-solid fa-fire"></i></div><span>PyTorch</span></div>
+          <div class="skill-item"><div class="skill-icon" style="background:#FF6F00;"><i class="fa-solid fa-brain"></i></div><span>TensorFlow</span></div>
+          <div class="skill-item"><div class="skill-icon" style="background:#F05032;"><i class="fa-brands fa-git-alt"></i></div><span>Git</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="section" id="experience">
+    <div class="section-head reveal">
+      <p class="eyebrow" data-en="WHERE I'VE WORKED" data-ar="أين عملت">WHERE I'VE WORKED</p>
+      <h2 data-en="Experience" data-ar="الخبرة">Experience</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="grid two-cols reveal delay-1">
+      <article class="card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-briefcase"></i></div>
+        <h3 data-en="Frontend Developer" data-ar="مطوّر واجهات">Frontend Developer</h3>
+        <p class="card-meta" data-en="React + .NET Backend" data-ar="React + .NET">React + .NET Backend</p>
+        <p data-en="Specialized in React web applications, built responsive interfaces with hooks, integrated frontends with .NET APIs and SQL databases, and contributed to reusable component architecture."
+           data-ar="متخصص في تطبيقات React، بناء واجهات سريعة الاستجابة باستخدام Hooks، ودمج الواجهة الأمامية مع .NET وSQL.">
+          Specialized in React web applications, built responsive interfaces with hooks, integrated frontends with .NET APIs and SQL databases, and contributed to reusable component architecture.
+        </p>
+      </article>
+      <article class="card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-brain"></i></div>
+        <h3 data-en="Machine Learning Trainee" data-ar="متدرب تعلم آلي">Machine Learning Trainee</h3>
+        <p class="card-meta" data-en="Future University in Egypt" data-ar="جامعة المستقبل">Future University in Egypt</p>
+        <p data-en="Completed intensive summer training in Machine Learning and Deep Learning, built computer vision projects using Python and TensorFlow."
+           data-ar="أكملت تدريباً مكثفاً في التعلم الآلي والعميق، وبنيت مشاريع رؤية حاسوبية باستخدام Python وTensorFlow.">
+          Completed intensive summer training in Machine Learning and Deep Learning, built computer vision projects using Python and TensorFlow.
+        </p>
+      </article>
+      <article class="card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-laptop-code"></i></div>
+        <h3 data-en="Frontend Developer Intern - DEPI" data-ar="متدرب تطوير واجهات - DEPI">Frontend Developer Intern - DEPI</h3>
+        <p class="card-meta"
+           data-en="Digital Egypt Pioneers Initiative (DEPI) | Nov 2025 - Present | New Cairo, Egypt (Hybrid)"
+           data-ar="مبادرة رواد مصر الرقمية (DEPI) | نوفمبر 2025 - حتى الآن | القاهرة الجديدة، مصر (هجين)">
+          Digital Egypt Pioneers Initiative (DEPI) | Nov 2025 - Present | New Cairo, Egypt (Hybrid)
+        </p>
+        <p data-en="Worked as a Frontend Developer Intern, focusing on building modern web applications using HTML, CSS, JavaScript, and React."
+           data-ar="عملت كمتدرب تطوير واجهات مع التركيز على بناء تطبيقات ويب حديثة باستخدام HTML وCSS وJavaScript وReact.">
+          Worked as a Frontend Developer Intern, focusing on building modern web applications using HTML, CSS, JavaScript, and React.
+        </p>
+        <p data-en="Key activities: built responsive web interfaces, completed frontend projects, applied software engineering principles, practiced problem solving, and worked in team-based projects."
+           data-ar="الأنشطة الأساسية: بناء واجهات ويب متجاوبة، إنجاز مشاريع Frontend، تطبيق مبادئ هندسة البرمجيات، تطوير مهارات حل المشكلات، والعمل ضمن فرق.">
+          Key activities: built responsive web interfaces, completed frontend projects, applied software engineering principles, practiced problem solving, and worked in team-based projects.
+        </p>
+        <div class="chips"><span>JavaScript</span><span>HTML</span><span>CSS</span><span>React</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section" id="services">
+    <div class="section-head reveal">
+      <p class="eyebrow" data-en="WHAT I OFFER" data-ar="ما أقدّمه">WHAT I OFFER</p>
+      <h2 data-en="Offered Services" data-ar="الخدمات المقدمة">Offered Services</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="grid three-cols reveal delay-1">
+      <article class="card service-card">
+        <div class="service-icon-wrap"><i class="fa-solid fa-code"></i></div>
+        <h3 data-en="Frontend Development" data-ar="تطوير الواجهات">Frontend Development</h3>
+        <p data-en="Building modern, responsive React interfaces with clean UX and scalable structure."
+           data-ar="بناء واجهات React تفاعلية حديثة وسريعة الاستجابة بتجربة مستخدم نظيفة.">Building modern, responsive React interfaces with clean UX and scalable structure.</p>
+      </article>
+      <article class="card service-card">
+        <div class="service-icon-wrap"><i class="fa-solid fa-laptop-code"></i></div>
+        <h3 data-en="Full-Stack Web Apps" data-ar="تطبيقات ويب متكاملة">Full-Stack Web Apps</h3>
+        <p data-en="Developing complete web applications integrating React with .NET backend APIs and SQL databases."
+           data-ar="تطوير تطبيقات ويب متكاملة بدمج React مع .NET وSQL.">Developing complete web applications integrating React with .NET backend APIs and SQL databases.</p>
+      </article>
+      <article class="card service-card">
+        <div class="service-icon-wrap"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <h3 data-en="Performance & UI Polish" data-ar="تحسين الأداء والتصميم">Performance &amp; UI Polish</h3>
+        <p data-en="Improving component architecture, responsiveness, and maintainability for faster, smoother experiences."
+           data-ar="تحسين بنية المكونات والاستجابة لتجارب مستخدم أسرع وأسلس.">Improving component architecture, responsiveness, and maintainability for faster, smoother experiences.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section" id="projects">
+    <div class="section-head reveal">
+      <p class="eyebrow" data-en="MY RECENT WORK" data-ar="أحدث أعمالي">MY RECENT WORK</p>
+      <h2 data-en="Projects" data-ar="المشاريع">Projects</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="grid two-cols reveal delay-1">
+      <article class="card project-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-building"></i></div>
+        <h3 data-en="Web Company" data-ar="موقع شركة">Web Company</h3>
+        <p data-en="Full-stack web application built with .NET, React, and SQL including RESTful APIs, modern UI components, state management, and end-to-end integration."
+           data-ar="تطبيق ويب متكامل مبني بـ .NET وReact وSQL يشمل RESTful APIs ومكونات UI حديثة وإدارة الحالة.">
+          Full-stack web application built with .NET, React, and SQL including RESTful APIs, modern UI components, state management, and end-to-end integration.
+        </p>
+        <div class="chips"><span>.NET</span><span>React</span><span>SQL</span></div>
+      </article>
+      <article class="card project-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-bag-shopping"></i></div>
+        <h3 data-en="Shoes E-Commerce Platform" data-ar="منصة تجارة إلكترونية للأحذية">Shoes E-Commerce Platform</h3>
+        <p data-en="End-to-end online shoes store with React storefront, product filtering, user accounts, shopping cart, wishlist, and order tracking."
+           data-ar="متجر إلكتروني متكامل للأحذية بواجهة React، فلترة المنتجات، حسابات المستخدمين، وتتبع الطلبات.">
+          End-to-end online shoes store with React storefront, product filtering, user accounts, shopping cart, wishlist, and order tracking.
+        </p>
+        <div class="chips"><span>.NET</span><span>React</span><span>SQL</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <div class="section-head reveal">
+      <p class="eyebrow" data-en="GET IN TOUCH" data-ar="تواصل معي">GET IN TOUCH</p>
+      <h2 data-en="Let's Work Together" data-ar="لنعمل معاً">Let's Work Together</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-grid reveal delay-1">
+      <div class="contact-info">
+        <h3 data-en="Let's talk about your project" data-ar="دعنا نتحدث عن مشروعك">Let's talk about your project</h3>
+        <p data-en="Feel free to reach out. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision."
+           data-ar="لا تتردد في التواصل معي. أنا دائماً منفتح على مناقشة المشاريع الجديدة والأفكار الإبداعية.">
+          Feel free to reach out. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+        </p>
+        <div class="contact-cards">
+          <a href="mailto:seifmagde40@gmail.com" class="contact-card">
+            <div class="contact-card-icon" style="background:#7c3aed;"><i class="fa-solid fa-envelope"></i></div>
+            <div><strong data-en="Email" data-ar="البريد الإلكتروني">Email</strong><span>seifmagde40@gmail.com</span></div>
+          </a>
+          <a href="https://wa.me/201145035484" class="contact-card" target="_blank">
+            <div class="contact-card-icon" style="background:#25D366;"><i class="fa-brands fa-whatsapp"></i></div>
+            <div><strong>WhatsApp</strong><span>01145035484</span></div>
+          </a>
+          <a href="https://linkedin.com/in/Seif-Magde" class="contact-card" target="_blank">
+            <div class="contact-card-icon" style="background:#0077B5;"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div><strong>LinkedIn</strong><span>linkedin.com/Seif-Magde</span></div>
+          </a>
+          <a href="https://github.com/" class="contact-card" target="_blank">
+            <div class="contact-card-icon" style="background:#333;"><i class="fa-brands fa-github"></i></div>
+            <div><strong>GitHub</strong><span>seifmagde</span></div>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form card" id="contact-form" novalidate>
+        <div class="form-group">
+          <input type="text" name="from_name" id="from_name" placeholder=" " required />
+          <label data-en="Your Name" data-ar="اسمك">Your Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" name="reply_to" id="reply_to" placeholder=" " required />
+          <label data-en="Your Email" data-ar="بريدك الإلكتروني">Your Email</label>
+        </div>
+        <div class="form-group">
+          <input type="text" name="subject" id="subject" placeholder=" " required />
+          <label data-en="Subject" data-ar="الموضوع">Subject</label>
+        </div>
+        <div class="form-group">
+          <textarea name="message" id="message" rows="5" placeholder=" " required></textarea>
+          <label data-en="Your Message" data-ar="رسالتك">Your Message</label>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submitBtn" style="width:100%;justify-content:center;">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span data-en="Send Message" data-ar="إرسال الرسالة">Send Message</span>
+        </button>
+        <p class="form-status" id="formStatus"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-quran">
+    <div class="quran-decor">
+      <span class="quran-star">✦</span><span class="quran-line"></span><span class="quran-star">✦</span>
+    </div>
+    <p class="quran-text">﴿ وَقُلِ اعْمَلُوا فَسَيَرَى اللَّهُ عَمَلَكُمْ وَرَسُولُهُ وَالْمُؤْمِنُونَ ﴾</p>
+    <p class="quran-ref">سورة التوبة - آية 105</p>
+    <div class="quran-decor">
+      <span class="quran-star">✦</span><span class="quran-line"></span><span class="quran-star">✦</span>
+    </div>
+  </div>
+  <div class="footer-socials">
+    <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    <a href="https://linkedin.com/in/Seif-Magde" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="https://wa.me/201145035484" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  </div>
+  <p class="footer-copy">© 2025 Seif Magde. All rights reserved.</p>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script>
+  window.PORTFOLIO_CONFIG = {
+    serviceId:  "service_xjaxv9n",
+    templateId: "template_admgaqu",
+    publicKey:  "a_N-UJxAtwewOmkZF"
+  };
+</script>
+<script src="script.js"></script>
+</body>
+</html>
+
